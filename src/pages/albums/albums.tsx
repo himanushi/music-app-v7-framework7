@@ -21,8 +21,9 @@ type Album = {
   title: string;
 };
 
-export const Albums = () => {
+export const Albums = ({ f7route }) => {
   const items: any[] = [];
+
   for (let i = 1; i <= 10000; i += 1) {
     items.push({
       title: `Item ${i}`,
@@ -36,6 +37,7 @@ export const Albums = () => {
   const renderExternal = (vl, newData) => {
     setVlData({ ...newData });
   };
+
   return (
     <Page>
       <Navbar title="Virtual List">
@@ -56,15 +58,6 @@ export const Albums = () => {
         </p>
         <p>Here is the example of virtual list with 10 000 items:</p>
       </Block>
-      <List
-        strong
-        outlineIos
-        insetMd
-        dividersIos
-        className="searchbar-not-found"
-      >
-        <ListItem title="Nothing found" />
-      </List>
       <List
         strong
         outlineIos

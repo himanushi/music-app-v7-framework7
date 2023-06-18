@@ -4,7 +4,7 @@ import { routes } from "./routes";
 const App = () => {
   return (
     <Framework7App name="My App" theme="ios" dark routes={routes}>
-      <View main url="/" />
+      <View browserHistory browserHistorySeparator="" main url="/" />
     </Framework7App>
   );
 };
