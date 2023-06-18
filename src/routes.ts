@@ -1,3 +1,4 @@
+import { Album } from "./pages/album/album";
 import { Albums } from "./pages/albums/albums";
 
 export const routes = [
@@ -6,7 +7,11 @@ export const routes = [
     component: Albums,
   },
   {
-    path: "/albums",
+    path: "/albums/",
     component: Albums,
+  },
+  {
+    path: "/albums/:albumId/",
+    component: Album,
   },
 ];

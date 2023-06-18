@@ -21,7 +21,8 @@ type Album = {
   title: string;
 };
 
-export const Albums = () => {
+export const Album = (...args) => {
+  console.log(args);
   const items: any[] = [];
   for (let i = 1; i <= 10000; i += 1) {
     items.push({
@@ -83,7 +84,7 @@ export const Albums = () => {
             <ListItem
               key={index}
               mediaItem
-              link={`/albums/${index}/`}
+              link="/albums/"
               title={item.title}
               subtitle={item.subtitle}
               style={{ top: `${vlData.topPosition}px` }}
